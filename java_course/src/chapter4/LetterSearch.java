@@ -3,7 +3,7 @@ package chapter4;
 import java.util.Scanner;
 
 /*
-Loop Break Example
+Nested Loop Example
 Search a String to determine if it contains the letter 'A'.
  */
 public class LetterSearch {
@@ -19,11 +19,10 @@ public class LetterSearch {
         boolean letterFound = false;
 
         //Search text for letter A
-        for (int i=0; i<text.length(); i++) {
+        for (int i=0; !letterFound && i<text.length(); i++) {
             char currentLetter = text.charAt(i);
             if (currentLetter == 'A' || currentLetter == 'a') {
                 letterFound = true;
-                break;
             }
         }
 
