@@ -6,7 +6,7 @@ import java.util.Scanner;
 Chapter 6 Objects Exercise
 Calculate and produce an itemized cell phone bill.
 * Allow the operator to input no data, just the id, or all necessary data.
-* Print out the itemized bi
+* Print out the itemized bill.
 */
 public class ItemizedPhoneBill {
 
