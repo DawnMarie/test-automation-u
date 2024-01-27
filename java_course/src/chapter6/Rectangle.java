@@ -6,6 +6,7 @@ This is a basic example of a Rectangle class that is meant to be used in
 other classes as an object.
  */
 public class Rectangle {
+
     private double length;
     private double width;
 
@@ -42,4 +43,5 @@ public class Rectangle {
     public double calculateArea() {
         return length * width;
     }
+
 }
