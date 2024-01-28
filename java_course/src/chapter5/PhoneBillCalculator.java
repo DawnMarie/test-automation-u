@@ -43,7 +43,7 @@ public class PhoneBillCalculator {
 
     public static double calculateTax(double planCost, double overage) {
         double taxRate = .15;
-        return (planCost + overage)*taxRate;
+        return (planCost + overage) * taxRate;
     }
 
     public static double calculateTotal(double planCost, double overage, double taxes) {

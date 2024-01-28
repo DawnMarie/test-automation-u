@@ -5,7 +5,7 @@ import java.util.Scanner;
 /*
 If-Else Statement Example
 All salespeople are expected to make at least 10 sales each week.
-For those who do, the receive a congratulatory message.
+For those who do, they receive a congratulatory message.
 For those who don't, they are informed of how many sales they were short.
  */
 public class QuotaCalculator {
@@ -25,7 +25,7 @@ public class QuotaCalculator {
         if (sales >= quota) System.out.println("Congrats! You've met your quota for the week!");
         else {
             int salesShort = quota - sales;
-            System.out.println("You did not make your weekly quota. You were "+ salesShort + " sales short.");
+            System.out.println("You did not make your weekly quota. You were " + salesShort + " sales short.");
         }
     }
 }

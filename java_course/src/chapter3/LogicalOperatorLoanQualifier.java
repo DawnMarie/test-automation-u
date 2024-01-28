@@ -25,7 +25,8 @@ public class LogicalOperatorLoanQualifier {
         scanner.close();
 
         //Make decision
-        if (salary >= requiredSalary && years >= requiredYearsEmployed) System.out.println("Congrats, you are approved for your loan!");
+        if (salary >= requiredSalary && years >= requiredYearsEmployed)
+            System.out.println("Congrats, you are approved for your loan!");
         else System.out.println("Sorry, you must earn at least " + requiredSalary + " per year to qualify.");
 
     }

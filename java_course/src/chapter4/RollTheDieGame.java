@@ -28,7 +28,7 @@ public class RollTheDieGame {
             int die = random.nextInt(6) + 1;
             currentSpace = currentSpace + die;
 
-            System.out.println("Roll #" + (rolls+1) + ": You've rolled a " + die + ".");
+            System.out.println("Roll #" + (rolls + 1) + ": You've rolled a " + die + ".");
 
             rolls++;
 
@@ -36,7 +36,8 @@ public class RollTheDieGame {
             else if (currentSpace > 20) System.out.println("You ran out of space on the board. You lost!");
             else if (rolls == maxRolls) System.out.println("You are now on space " + currentSpace +
                     " but you ran out of die rolls before making it to space 20. You lost!");
-            else System.out.println("You are now on space " + currentSpace + " and have " + (20-currentSpace) + " more to go.");
+            else
+                System.out.println("You are now on space " + currentSpace + " and have " + (20 - currentSpace) + " more to go.");
 
         }
 

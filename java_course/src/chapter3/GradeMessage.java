@@ -16,7 +16,7 @@ public class GradeMessage {
 
         String message;
 
-        switch(grade) {
+        switch (grade) {
             case "A":
                 message = "Excellent job!";
                 break;

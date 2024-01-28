@@ -28,7 +28,7 @@ public class PhoneBill {
     //This is an all-fields constructor
     public PhoneBill(int id, double baseCost, int baseMinutes, int minutesUsed) {
         this.id = id;
-        this.baseCost=baseCost;
+        this.baseCost = baseCost;
         this.baseMinutes = baseMinutes;
         this.minutesUsed = minutesUsed;
         printItemizedBill();
@@ -43,7 +43,7 @@ public class PhoneBill {
 
     private static double calculateTax(double planCost, double overage) {
         double taxRate = .15;
-        return (planCost + overage)*taxRate;
+        return (planCost + overage) * taxRate;
     }
 
     private static double calculateTotal(double planCost, double overage, double taxes) {

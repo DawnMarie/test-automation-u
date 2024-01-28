@@ -19,7 +19,7 @@ public class LetterSearch {
         boolean letterFound = false;
 
         //Search text for letter A
-        for (int i=0; !letterFound && i<text.length(); i++) {
+        for (int i = 0; !letterFound && i < text.length(); i++) {
             char currentLetter = text.charAt(i);
             if (currentLetter == 'A' || currentLetter == 'a') {
                 letterFound = true;
