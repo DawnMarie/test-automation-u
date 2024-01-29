@@ -10,6 +10,10 @@ public class Person {
     private int age;
     private String gender;
 
+    public Person(String name) {
+        System.out.println("In Person the name is now set.");
+    }
+
     public String getName() {
         return name;
     }
