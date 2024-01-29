@@ -1,7 +1,7 @@
 package chapter9;
 
 /*
-Method Overloading & Overriding Example
+Chapter 9c Method Overloading & Overriding Example
 This is a base class of a Rectangle class that can be used by itself,
 or as a parent for other similar classes.
  */

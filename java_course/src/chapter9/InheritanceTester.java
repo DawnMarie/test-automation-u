@@ -1,35 +1,18 @@
 package chapter9;
 
 /*
-Chapter 9c Overloading & Overriding Methods Example
-This class demonstrates that Square objects have all the same
-methods available as the Rectangle object, but one of the methods
-is overridden from the parent, and one of the methods has both a Square
-and a Rectangle version.
+Chapter 9d Access Limitations & Multiple Inheritances Example
+This class demonstrates that inheritance can pass through multiple
+layers of objects in a chain.
  */
 public class InheritanceTester {
 
     public static void main(String[] args) {
 
-        Rectangle rectangle = new Rectangle();
-        rectangle.print();
+        Mother mom = new Mother();
+        mom.setName("Person");
 
-        Square square = new Square();
-        square.print("square.");
+        System.out.println(mom.getName() + " is a " + mom.getGender());
 
-        testSquareOverride();
-
-    }
-
-    public static void testSquareOverride() {
-        Rectangle rectangle = new Rectangle();
-        rectangle.setLength(4);
-        rectangle.setWidth(8);
-        System.out.println(rectangle.calculatePerimeter());
-
-        Square square = new Square();
-        square.setLength(4);
-        square.setWidth(8);
-        System.out.println(square.calculatePerimeter());
     }
 }
