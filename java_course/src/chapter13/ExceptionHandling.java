@@ -7,9 +7,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
-Chapter 13a Exceptions Example
-This class demonstrates how to use try-catch blocks in order to handle
-exceptions correctly.
+Chapter 13b Throwing Exceptions Example
+This class demonstrates how to use try-catch blocks ior re-throwing
+in order to handle exceptions correctly.
  */
 public class ExceptionHandling {
 
@@ -17,7 +17,11 @@ public class ExceptionHandling {
 
         createNewFile();
         numbersExceptionHandling();
-
+        try {
+            createNewFileRethrow();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void createNewFile() {
@@ -29,6 +33,11 @@ public class ExceptionHandling {
             System.out.println("Directory does not exist.");
             e.printStackTrace();
         }
+    }
+
+    public static void createNewFileRethrow() throws IOException {
+        File file = new File("resources/nonexistent.txt");
+        file.createNewFile();
     }
 
     public static void numbersExceptionHandling() {
