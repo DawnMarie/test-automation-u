@@ -1,4 +1,4 @@
-package dev.dawn-marie;
+package dev.dawnmarie;
 
 import static org.junit.Assert.assertTrue;
 

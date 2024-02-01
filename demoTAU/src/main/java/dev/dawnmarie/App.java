@@ -1,4 +1,4 @@
-package dev.dawn-marie;
+package dev.dawnmarie;
 
 /**
  * Hello world!
