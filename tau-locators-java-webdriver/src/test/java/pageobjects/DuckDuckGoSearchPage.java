@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class DuckDuckGoSearchPage extends AbstractPage{
+public class DuckDuckGoSearchPage extends AbstractPage {
 
     public final static By searchInput = By.name("q");
     public final static By searchButton = By.cssSelector("button[aria-label='Search']");

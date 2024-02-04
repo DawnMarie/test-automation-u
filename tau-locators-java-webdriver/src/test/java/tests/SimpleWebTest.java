@@ -14,7 +14,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.everyItem;
+import static org.hamcrest.Matchers.matchesRegex;
 
 public class SimpleWebTest {
 
@@ -22,7 +23,7 @@ public class SimpleWebTest {
     private WebDriverWait wait;
 
     @BeforeEach
-    public void initWebDriver(){
+    public void initWebDriver() {
         driver = new EdgeDriver();
         wait = new WebDriverWait(driver, 30);
     }

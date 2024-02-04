@@ -7,8 +7,8 @@ public abstract class AbstractPage {
 
     private final static int TIMEOUT = 30;
 
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
 
     public AbstractPage(WebDriver driver) {
         this.driver = driver;
