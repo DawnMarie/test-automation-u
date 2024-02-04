@@ -6,7 +6,7 @@ import org.junit.jupiter.api.*;
 public class FirstTestClass {
 
     @BeforeAll
-    void beforeAll(){
+    void beforeAll() {
         System.out.println("--This is the beforeAll method.");
     }
 
