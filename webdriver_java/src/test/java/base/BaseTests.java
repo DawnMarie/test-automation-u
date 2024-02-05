@@ -1,15 +1,13 @@
 package base;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
-
-import java.util.List;
+import pages.HomePage;
 
 public class BaseTests {
 
     private WebDriver driver;
+    protected HomePage homePage;
 
     public static void main(String[] args) {
         BaseTests test = new BaseTests();
@@ -21,15 +19,8 @@ public class BaseTests {
         driver = new EdgeDriver();
         driver.get("https://the-internet.herokuapp.com");
 
-        WebElement shiftingLink = driver.findElement(By.linkText("Shifting Content"));
-        shiftingLink.click();
+        homePage = new HomePage(driver);
 
-        WebElement firstLink = driver.findElement(By.linkText("Example 1: Menu Element"));
-        firstLink.click();
-
-        List<WebElement> linksToCount = driver.findElements(By.cssSelector("ul li"));
-
-        System.out.println(linksToCount.size());
         driver.quit();
     }
 }
