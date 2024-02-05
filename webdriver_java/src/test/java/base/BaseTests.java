@@ -21,13 +21,15 @@ public class BaseTests {
         driver = new EdgeDriver();
         driver.get("https://the-internet.herokuapp.com");
 
-        List<WebElement> links = driver.findElements(By.tagName("a"));
-        System.out.println(links.size());
+        WebElement shiftingLink = driver.findElement(By.linkText("Shifting Content"));
+        shiftingLink.click();
 
-        WebElement inputsLink = driver.findElement(By.linkText("Inputs"));
-        inputsLink.click();
+        WebElement firstLink = driver.findElement(By.linkText("Example 1: Menu Element"));
+        firstLink.click();
 
-        System.out.println(driver.getTitle());
+        List<WebElement> linksToCount = driver.findElements(By.cssSelector("ul li"));
+
+        System.out.println(linksToCount.size());
         driver.quit();
     }
 }
