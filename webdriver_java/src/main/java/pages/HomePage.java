@@ -26,6 +26,11 @@ public class HomePage {
         return new LoginPage(driver);
     }
 
+    public HorizontalSliderPage clickHorizontalSlider() {
+        clickLink("Horizontal Slider");
+        return new HorizontalSliderPage(driver);
+    }
+
     public HoversPage clickHovers() {
         clickLink("Hovers");
         return new HoversPage(driver);
