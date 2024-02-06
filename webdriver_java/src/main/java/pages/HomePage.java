@@ -11,6 +11,11 @@ public class HomePage {
         this.driver = driver;
     }
 
+    public ContextMenuPage clickContextMenu() {
+        clickLink("Context Menu");
+        return new ContextMenuPage(driver);
+    }
+
     public DropdownPage clickDropDown() {
         clickLink("Dropdown");
         return new DropdownPage(driver);
