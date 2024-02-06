@@ -36,6 +36,11 @@ public class HomePage {
         return new HoversPage(driver);
     }
 
+    public AlertsPage clickJavaScriptAlerts() {
+        clickLink("JavaScript Alerts");
+        return new AlertsPage(driver);
+    }
+
     public KeyPressesPage clickKeyPresses() {
         clickLink("Key Presses");
         return new KeyPressesPage(driver);
