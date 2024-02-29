@@ -1,14 +1,11 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class HomePage {
-
-    private final WebDriver driver;
+public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public ContextMenuPage clickContextMenu() {
@@ -36,6 +33,11 @@ public class HomePage {
         return new LoginPage(driver);
     }
 
+    public FramesPage clickFrames() {
+        clickLink("Frames");
+        return new FramesPage(driver);
+    }
+
     public HorizontalSliderPage clickHorizontalSlider() {
         clickLink("Horizontal Slider");
         return new HorizontalSliderPage(driver);
@@ -60,9 +62,4 @@ public class HomePage {
         clickLink("WYSIWYG Editor");
         return new WysiwygEditorPage(driver);
     }
-
-    private void clickLink(String linkText) {
-        driver.findElement(By.linkText(linkText)).click();
-    }
-
 }

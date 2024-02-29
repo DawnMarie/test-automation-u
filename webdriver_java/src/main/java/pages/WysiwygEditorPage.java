@@ -3,18 +3,17 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class WysiwygEditorPage {
+public class WysiwygEditorPage extends BasePage {
 
-    private WebDriver driver;
-    private String editorIframeId = "mce_0_ifr";
-    private By textArea = By.id("tinymce");
-    private By decreaseIndentButton = By.cssSelector("button[title='Decrease indent']");
+    private final By textArea = By.id("tinymce");
+    private final By decreaseIndentButton = By.cssSelector("button[title='Decrease indent']");
 
     public WysiwygEditorPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     private void switchToEditArea() {
+        String editorIframeId = "mce_0_ifr";
         driver.switchTo().frame(editorIframeId);
     }
 
