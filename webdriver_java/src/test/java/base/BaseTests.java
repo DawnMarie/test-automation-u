@@ -7,6 +7,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 
+import java.util.concurrent.TimeUnit;
+
 public class BaseTests {
 
     protected HomePage homePage;
@@ -16,14 +18,15 @@ public class BaseTests {
     public void setUp() {
         System.setProperty("webdriver.edge.driver", "resources/msedgedriver.exe");
         driver = new EdgeDriver();
-        driver.get("https://the-internet.herokuapp.com");
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        homePage = new HomePage(driver);
+        goHome();
     }
 
     @BeforeMethod
     public void goHome() {
         driver.get("https://the-internet.herokuapp.com");
+        homePage = new HomePage(driver);
     }
 
     @AfterClass
