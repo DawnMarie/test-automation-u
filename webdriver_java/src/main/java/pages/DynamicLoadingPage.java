@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class DynamicLoadingPage extends BasePage {
@@ -22,4 +23,12 @@ public class DynamicLoadingPage extends BasePage {
         driver.findElement(link_Example2).click();
         return new DynamicLoadingExample2Page(driver);
     }
+
+    public DynamicLoadingExample1Page openExample1InNewWindow() {
+        driver.findElement(link_Example1).sendKeys(Keys.CONTROL, Keys.RETURN);
+        driver.findElement(link_Example1).click();
+
+        return new DynamicLoadingExample1Page(driver);
+    }
+
 }

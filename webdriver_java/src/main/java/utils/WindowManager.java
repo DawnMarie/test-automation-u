@@ -1,6 +1,10 @@
 package utils;
 
+import java.time.Duration;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 
 public class WindowManager {
 
@@ -34,6 +38,17 @@ public class WindowManager {
         for (String window : windows) {
             driver.switchTo().window(window);
             if (tabTitle.equals(driver.getTitle())) break;
+        }
+    }
+
+    public void switchToTab(By by) {
+        var windows = driver.getWindowHandles();
+        FluentWait<WebDriver> wait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(5));
+
+        for (String window : windows) {
+            driver.switchTo().window(window);
+            wait.until(ExpectedConditions.visibilityOf(driver.findElement(by)));
         }
     }
 
