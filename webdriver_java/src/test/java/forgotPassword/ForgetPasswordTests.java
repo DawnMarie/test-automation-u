@@ -1,11 +1,11 @@
 package forgotPassword;
 
+import static org.testng.Assert.assertTrue;
+
 import base.BaseTests;
 import org.testng.annotations.Test;
 import pages.EmailSentPage;
 import pages.ForgotPasswordPage;
-
-import static org.testng.Assert.assertTrue;
 
 public class ForgetPasswordTests extends BaseTests {
 

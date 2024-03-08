@@ -1,9 +1,9 @@
 package horizontalSlider;
 
+import static org.testng.Assert.assertEquals;
+
 import base.BaseTests;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.assertEquals;
 
 public class HorizontalSliderTests extends BaseTests {
 
@@ -12,7 +12,8 @@ public class HorizontalSliderTests extends BaseTests {
         var horizontalSliderPage = homePage.clickHorizontalSlider();
         horizontalSliderPage.clickSlider();
         horizontalSliderPage.moveSlider(4);
-        assertEquals(horizontalSliderPage.getSliderValue(), "4", "The slider is not at the correct value");
+        assertEquals(horizontalSliderPage.getSliderValue(), "4",
+                "The slider is not at the correct value");
     }
 
 }

@@ -1,9 +1,9 @@
 package frames;
 
+import static org.testng.Assert.assertEquals;
+
 import base.BaseTests;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.assertEquals;
 
 public class FrameTests extends BaseTests {
 
@@ -19,7 +19,8 @@ public class FrameTests extends BaseTests {
         editorPage.decreaseIndentation();
         editorPage.setTextArea(text2);
 
-        assertEquals(editorPage.getTextFromEditor(), text1 + text2, "Text from editor is incorrect.");
+        assertEquals(editorPage.getTextFromEditor(), text1 + text2,
+                "Text from editor is incorrect.");
     }
 
     @Test
@@ -29,8 +30,10 @@ public class FrameTests extends BaseTests {
         String leftText = "LEFT";
         String bottomText = "BOTTOM";
 
-        assertEquals(nestedPage.getTextFromLeftFrame().strip(), leftText, "Left frame is incorrect.");
-        assertEquals(nestedPage.getTextFromBottomFrame().strip(), bottomText, "Bottom frame is incorrect.");
+        assertEquals(nestedPage.getTextFromLeftFrame().strip(), leftText,
+                "Left frame is incorrect.");
+        assertEquals(nestedPage.getTextFromBottomFrame().strip(), bottomText,
+                "Bottom frame is incorrect.");
     }
 
 }

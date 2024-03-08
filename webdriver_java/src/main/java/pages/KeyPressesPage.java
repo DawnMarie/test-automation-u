@@ -18,7 +18,7 @@ public class KeyPressesPage {
     }
 
     public void enterPi() {
-        enterText("\u03C0" + "=3.14");
+        enterText("π" + "=3.14");
     }
 
     public String getResult() {

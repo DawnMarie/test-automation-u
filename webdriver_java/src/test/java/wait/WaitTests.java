@@ -1,9 +1,9 @@
 package wait;
 
+import static org.testng.Assert.assertEquals;
+
 import base.BaseTests;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.assertEquals;
 
 public class WaitTests extends BaseTests {
 
@@ -20,4 +20,5 @@ public class WaitTests extends BaseTests {
         loadingPage.clickStart();
         assertEquals(loadingPage.getLoadedText(), "Hello World!", "Loaded text incorrect.");
     }
+
 }

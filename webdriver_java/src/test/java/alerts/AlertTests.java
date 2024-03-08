@@ -1,9 +1,9 @@
 package alerts;
 
+import static org.testng.Assert.assertEquals;
+
 import base.BaseTests;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.assertEquals;
 
 public class AlertTests extends BaseTests {
 
@@ -12,7 +12,8 @@ public class AlertTests extends BaseTests {
         var alertsPage = homePage.clickJavaScriptAlerts();
         alertsPage.triggerAlert();
         alertsPage.alert_clickToAccept();
-        assertEquals(alertsPage.getResult(), "You successfully clicked an alert", "Results text incorrect.");
+        assertEquals(alertsPage.getResult(), "You successfully clicked an alert",
+                "Results text incorrect.");
     }
 
     @Test
