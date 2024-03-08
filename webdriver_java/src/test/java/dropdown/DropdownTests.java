@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import base.BaseTests;
+import java.util.List;
 import org.testng.annotations.Test;
 
 public class DropdownTests extends BaseTests {
@@ -18,4 +19,17 @@ public class DropdownTests extends BaseTests {
         assertEquals(selectedOptions.size(), 1, "Incorrect number of selections.");
         assertTrue(selectedOptions.contains(option), "Option not selected");
     }
+
+    @Test
+    public void testMultiSelectingFromModifiedDropdown() {
+        var dropdownPage = homePage.clickDropDown();
+        dropdownPage.modifyDropdownElement();
+
+        var correctOptions = List.of("Option 1", "Option 2");
+        correctOptions.forEach(dropdownPage::selectFromDropdown);
+
+        var selectedOptions = dropdownPage.getSelectedOptions();
+        assertTrue(selectedOptions.containsAll(correctOptions), "Test failed!");
+    }
+
 }
