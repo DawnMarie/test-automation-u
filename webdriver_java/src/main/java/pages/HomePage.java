@@ -33,16 +33,6 @@ public class HomePage extends BasePage {
         return new ForgotPasswordPage(driver);
     }
 
-    public InfiniteScrollPage clickInfiniteScroll() {
-        clickLink("Infinite Scroll");
-        return new InfiniteScrollPage(driver);
-    }
-
-    public LargeAndDeepDomPage clickLargeAndDeepDom() {
-        clickLink("Large & Deep DOM");
-        return new LargeAndDeepDomPage(driver);
-    }
-
     public LoginPage clickFormAuthentication() {
         clickLink("Form Authentication");
         return new LoginPage(driver);
@@ -63,6 +53,11 @@ public class HomePage extends BasePage {
         return new HoversPage(driver);
     }
 
+    public InfiniteScrollPage clickInfiniteScroll() {
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
+
     public AlertsPage clickJavaScriptAlerts() {
         clickLink("JavaScript Alerts");
         return new AlertsPage(driver);
@@ -71,6 +66,16 @@ public class HomePage extends BasePage {
     public KeyPressesPage clickKeyPresses() {
         clickLink("Key Presses");
         return new KeyPressesPage(driver);
+    }
+
+    public LargeAndDeepDomPage clickLargeAndDeepDom() {
+        clickLink("Large & Deep DOM");
+        return new LargeAndDeepDomPage(driver);
+    }
+
+    public MultipleWindowsPage clickMultipleWindows() {
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
     }
 
     public WysiwygEditorPage clickWysiwygEditor() {
