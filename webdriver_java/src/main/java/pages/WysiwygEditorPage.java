@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class WysiwygEditorPage extends BasePage {
 
     private final By textArea = By.id("tinymce");
-    private final By decreaseIndentButton = By.cssSelector("button[title='Decrease indent']");
+    private final By decreaseIndentButton = By.cssSelector("button[title=\"Decrease indent\"]");
 
     public WysiwygEditorPage(WebDriver driver) {
         super(driver);
