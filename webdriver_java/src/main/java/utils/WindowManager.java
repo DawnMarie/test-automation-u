@@ -37,7 +37,9 @@ public class WindowManager {
 
         for (String window : windows) {
             driver.switchTo().window(window);
-            if (tabTitle.equals(driver.getTitle())) break;
+            if (tabTitle.equals(driver.getTitle())) {
+                break;
+            }
         }
     }
 
