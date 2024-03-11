@@ -10,7 +10,7 @@ public class EventReporter implements WebDriverEventListener {
 
     @Override
     public void beforeAlertAccept(WebDriver webDriver) {
-
+        System.out.println("Accepting alert.");
     }
 
     @Override
@@ -132,12 +132,12 @@ public class EventReporter implements WebDriverEventListener {
 
     @Override
     public <X> void afterGetScreenshotAs(OutputType<X> outputType, X x) {
-
+        System.out.println("Screenshot taken.");
     }
 
     @Override
     public void beforeGetText(WebElement webElement, WebDriver webDriver) {
-
+        System.out.println("Looking for string: " + webElement.getText());
     }
 
     @Override
