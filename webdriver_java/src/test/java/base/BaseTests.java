@@ -8,23 +8,26 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
+import utils.EventReporter;
 import utils.WindowManager;
 
 public class BaseTests {
 
     protected HomePage homePage;
-    private WebDriver driver;
+    private EventFiringWebDriver driver;
 
     @BeforeClass
     public void setUp() {
         System.setProperty("webdriver.edge.driver", "resources/msedgedriver.exe");
-        driver = new EdgeDriver();
+        driver = new EventFiringWebDriver(new EdgeDriver());
+        driver.register(new EventReporter());
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         goHome();
