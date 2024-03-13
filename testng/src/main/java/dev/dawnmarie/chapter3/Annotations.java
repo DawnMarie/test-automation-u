@@ -1,4 +1,4 @@
-package chapter3;
+package dev.dawnmarie.chapter3;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
